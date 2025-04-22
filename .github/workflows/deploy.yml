@@ -11,9 +11,14 @@ on:
         description: "Author of the deploy comment"
         required: true
         type: string
+      environment:
+        description: "Author of the deploy comment"
+        required: true
+        type: string
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: ${{inputs.environment}}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
