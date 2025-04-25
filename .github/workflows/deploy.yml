@@ -54,5 +54,5 @@ jobs:
       - name: Simulate Deployment
         run: |
           echo "Deploying application for PR #${{ inputs.pr_number }} to ${{ inputs.environment }}..."
-          sleep 20
+          sleep 10
           echo "Deployment successful."
